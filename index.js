@@ -90,15 +90,6 @@ function baseGeneXhr({
   let tpl = '';
   let funcPa = geneParam(funcParams);
   let dataPa = geneParam(params);
-  
-  //当为get方法时 去除链接中的query参数
-  if (type==apiRequestType.GET){
-    const idx = url.indexOf("?")
-    if (idx > 0) {
-      url = url.substring(0, idx)
-    }
-  }
-
   funcPa = funcPa ? `{ ${funcPa} }` : '';
   dataPa = dataPa ? `{ ${dataPa} }` : '';
   const headerStr = Object.values(headers).length ? JSON.stringify(headers) : '';
@@ -129,8 +120,24 @@ function baseGeneXhr({
   return tpl;
 }
 
+
+function getPathUri(url ,type) {
+  //当为get方法时 去除链接中的query参数
+  if (type==apiRequestType.GET){
+    const idx = url.indexOf("?")
+    if (idx > 0) {
+      url = url.substring(0, idx)
+    }
+  }
+  return url
+
+}
+
+
 function normalGeneXhr({type, uri, params, apiName, isPostJson, headers}) {
+  uri = getPathUri(uri,type)
   const name = uri.substr(uri.lastIndexOf('/') + 1);
+
   return baseGeneXhr({
     type,
     url: uri,
@@ -144,6 +151,7 @@ function normalGeneXhr({type, uri, params, apiName, isPostJson, headers}) {
 }
 
 function restGeneXhr({type, uri, params, apiName, isPostJson, headers}) {
+  uri = getPathUri(uri,type)
   const nameArray = apiName.split('-');
   if (nameArray.length <= 1) {
     throw new Error(`${apiName} 没有函数名称，需要以 '-' 分割 `);
