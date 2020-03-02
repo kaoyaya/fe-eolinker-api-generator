@@ -90,6 +90,15 @@ function baseGeneXhr({
   let tpl = '';
   let funcPa = geneParam(funcParams);
   let dataPa = geneParam(params);
+  
+  //当为get方法时 去除链接中的query参数
+  if (type==apiRequestType.GET){
+    const idx = url.indexOf("?")
+    if (idx > 0) {
+      url = url.substring(0, idx)
+    }
+  }
+
   funcPa = funcPa ? `{ ${funcPa} }` : '';
   dataPa = dataPa ? `{ ${dataPa} }` : '';
   const headerStr = Object.values(headers).length ? JSON.stringify(headers) : '';
