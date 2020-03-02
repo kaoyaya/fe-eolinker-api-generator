@@ -98,7 +98,7 @@ function baseGeneXhr({
       url = url.substring(0, idx)
     }
   }
-  
+
   funcPa = funcPa ? `{ ${funcPa} }` : '';
   dataPa = dataPa ? `{ ${dataPa} }` : '';
   const headerStr = Object.values(headers).length ? JSON.stringify(headers) : '';
@@ -117,7 +117,7 @@ function baseGeneXhr({
   }`;
   } else if (type === apiRequestType.GET) {
     tpl = `
-  ${comment}  
+  ${comment}
   static ${funcName}(${funcPa}) {
     return xhr({
       url: \`${url}\`,${headerStr ? `\n      headers:${headerStr},` : ''}
