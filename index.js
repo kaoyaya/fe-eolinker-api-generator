@@ -87,9 +87,9 @@ function geneContext(funcPa, isNuxtMode, isSecPa) {
   let str = 'context';
   if (funcPa || isSecPa) {
     str = ',' + str;
-    if (!isSecPa) {
-      str += ' = null';
-    }
+  }
+  if (!isSecPa) {
+    str += ' = null';
   }
   return isNuxtMode ? str : '';
 }
