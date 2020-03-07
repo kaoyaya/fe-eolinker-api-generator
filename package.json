@@ -1,6 +1,6 @@
 {
   "name": "@kaoyaya/fe-eolinker-api-generator",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "description": "eolinker-api-generator",
   "main": "index.js",
   "directories": {
@@ -23,6 +23,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "mkdirp": "^0.5.1",
-    "path-to-regexp": "^2.2.1"
+    "path-to-regexp": "^2.2.1",
+    "readline-sync": "^1.4.10"
   }
 }

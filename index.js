@@ -3,11 +3,9 @@ const path = require('path');
 const pathToRegexp = require('path-to-regexp');
 const mkdirp = require('mkdirp');
 const readline = require('readline');
+var readlineSync = require('readline-sync');
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+let showTip = true;
 
 const apiRequestType = {
   POST: 0,
@@ -61,6 +59,15 @@ const defaultConfig = {
   isNuxtMode: false,
 };
 
+process.on('exit', function (code) {
+  console.log('状态码:', code);
+  if (code !== 101) {
+    console.log('\n', '接口生成完毕', '\n');
+  } else {
+    console.log('\n', '接口生成中断', '\n');
+  }
+});
+
 function apiFilter(api) {
   return [0, 6].includes(api.baseInfo.apiStatus);
 }
@@ -80,6 +87,9 @@ function geneContext(funcPa, isNuxtMode, isSecPa) {
   let str = 'context';
   if (funcPa || isSecPa) {
     str = ',' + str;
+    if (!isSecPa) {
+      str += ' = null';
+    }
   }
   return isNuxtMode ? str : '';
 }
@@ -125,7 +135,7 @@ function baseGeneXhr({
   if (type === apiRequestType.POST) {
     tpl = `
   ${comment}
-  static ${funcName}(${funcPa}${contextPa}=null) {
+  static ${funcName}(${funcPa}${contextPa}) {
     return xhr({
       method: 'post',${headerStr ? `\n      headers:${headerStr},` : ''}
       url: \`${url}\`,${isPostJson ? '' : '\n      json: false,'}
@@ -136,7 +146,7 @@ function baseGeneXhr({
   } else if (type === apiRequestType.GET) {
     tpl = `
   ${comment}
-  static ${funcName}(${funcPa}${contextPa}=null) {
+  static ${funcName}(${funcPa}${contextPa}) {
     return xhr({
       url: \`${url}\`,${headerStr ? `\n      headers:${headerStr},` : ''}
       params: ${dataPa || '{}'},
@@ -252,21 +262,13 @@ function geneApi(
     singlePostJsonFilter = isPostJson,
     isNuxtMode = defaultConfig.isNuxtMode,
   }) {
-  if (isNuxtMode) {
-    rl.question('当前代码中含有要使用nuxtMode模式生成的接口，是否继续?(Y/N)', function (answer) {
-      if (answer.toLowerCase() === 'y') {
-        console.log('正在继续，请等待...');
-        rl.close();
-      } else if (answer.toLowerCase() === 'n') {
-        console.log('接口生成中断');
-        process.exit();
-      }
-    });
-    // close事件监听,不加close，则不会结束
-    rl.on('close', function () {
-      // 结束程序
-      process.exit(0);
-    });
+  if (isNuxtMode && showTip) {
+    showTip = false;
+    if (!readlineSync.keyInYN('当前代码中含有要使用nuxtMode模式生成的接口，是否继续?')) {
+      // 没输入"Y"退出进程
+      process.exit(101);
+    }
+    // tipsToContinue();
   }
   const outputFile = outputFileName || path.parse(entry).name;
   const exist = fs.existsSync(`./${outputFile}.js`);
