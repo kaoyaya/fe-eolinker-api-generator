@@ -46,11 +46,13 @@ const API_TYPE = {
   rest: 'rest',
 };
 
+
 const defaultConfig = {
   apiType: 'rest',
   overwrite: true,
   importHead: `import xhr from '../xhr/microXhr';`,
   outputExtname: `js`,
+  isNuxtMode: false,
 };
 
 function apiFilter(api) {
@@ -85,17 +87,18 @@ function geneComment({commentName, funcParams}) {
 }
 
 function baseGeneXhr({
-                       type, url, funcParams, params, funcName, commentName, isPostJson, headers,
+                       type, url, funcParams, params, funcName, commentName, isPostJson, headers, isNuxtMode,
                      }) {
   let tpl = '';
   let funcPa = geneParam(funcParams);
   let dataPa = geneParam(params);
+  let context = isNuxtMode ? ',context' : '';
 
   //当为get方法时 去除链接中的query参数
-  if (type==apiRequestType.GET){
-    const idx = url.indexOf("?")
+  if (type == apiRequestType.GET) {
+    const idx = url.indexOf('?');
     if (idx > 0) {
-      url = url.substring(0, idx)
+      url = url.substring(0, idx);
     }
   }
 
@@ -103,48 +106,48 @@ function baseGeneXhr({
   dataPa = dataPa ? `{ ${dataPa} }` : '';
   const headerStr = Object.values(headers).length ? JSON.stringify(headers) : '';
   const comment = geneComment({commentName, funcParams});
-  type = Number(type)
+  type = Number(type);
   if (type === apiRequestType.POST) {
     tpl = `
   ${comment}
-  static ${funcName}(${funcPa}) {
+  static ${funcName}(${funcPa}${context}) {
     return xhr({
       method: 'post',${headerStr ? `\n      headers:${headerStr},` : ''}
       url: \`${url}\`,${isPostJson ? '' : '\n      json: false,'}
       data: ${dataPa || '{}'},
       custom: arguments[1]
-    })
+    }${context})
   }`;
   } else if (type === apiRequestType.GET) {
     tpl = `
   ${comment}
-  static ${funcName}(${funcPa}) {
+  static ${funcName}(${funcPa}${context}) {
     return xhr({
       url: \`${url}\`,${headerStr ? `\n      headers:${headerStr},` : ''}
       params: ${dataPa || '{}'},
       custom: arguments[1]
-    })
+    }${context})
   }`;
   }
   return tpl;
 }
 
 
-function getPathUri(url ,type) {
+function getPathUri(url, type) {
   //当为get方法时 去除链接中的query参数
-  if (type==apiRequestType.GET){
-    const idx = url.indexOf("?")
+  if (type == apiRequestType.GET) {
+    const idx = url.indexOf('?');
     if (idx > 0) {
-      url = url.substring(0, idx)
+      url = url.substring(0, idx);
     }
   }
-  return url
+  return url;
 
 }
 
 
-function normalGeneXhr({type, uri, params, apiName, isPostJson, headers}) {
-  uri = getPathUri(uri,type)
+function normalGeneXhr({type, uri, params, apiName, isPostJson, headers, isNuxtMode}) {
+  uri = getPathUri(uri, type);
   const name = uri.substr(uri.lastIndexOf('/') + 1);
 
   return baseGeneXhr({
@@ -156,11 +159,12 @@ function normalGeneXhr({type, uri, params, apiName, isPostJson, headers}) {
     commentName: apiName,
     funcName: name,
     isPostJson,
+    isNuxtMode,
   });
 }
 
-function restGeneXhr({type, uri, params, apiName, isPostJson, headers}) {
-  uri = getPathUri(uri,type)
+function restGeneXhr({type, uri, params, apiName, isPostJson, headers, isNuxtMode}) {
+  uri = getPathUri(uri, type);
   const nameArray = apiName.split('-');
   if (nameArray.length <= 1) {
     throw new Error(`${apiName} 没有函数名称，需要以 '-' 分割 `);
@@ -191,6 +195,7 @@ function restGeneXhr({type, uri, params, apiName, isPostJson, headers}) {
     funcName,
     isPostJson,
     headers,
+    isNuxtMode,
   });
 }
 
@@ -230,7 +235,9 @@ function geneApi(
     outputExtname = defaultConfig.outputExtname,
     globalPostJson = false,
     singlePostJsonFilter = isPostJson,
+    isNuxtMode = defaultConfig.isNuxtMode,
   }) {
+  console.log('---------------', isNuxtMode);
   const outputFile = outputFileName || path.parse(entry).name;
   const exist = fs.existsSync(`./${outputFile}.js`);
   if (!overwrite) {
@@ -240,7 +247,7 @@ function geneApi(
     if (err) throw err;
     const apiList = JSON.parse(data.toString());
     let strs = '';
-    apiList.filter(apiFilter).forEach((item) => {
+    apiList.filter(apiFilter).forEach((item) => {//json内容
       const {baseInfo, headerInfo, requestInfo, restfulParam, urlParam} = item;
       const {apiName, apiURI, apiRequestType} = baseInfo;
       const str = geneXhr({
@@ -250,6 +257,7 @@ function geneApi(
         isPostJson: singlePostJsonFilter(headerInfo) || globalPostJson,
         params: [...requestInfo, ...restfulParam || [], ...urlParam].filter(item => !item.paramKey.includes('>>')),
         headers: headersToObject(headerInfo),
+        isNuxtMode: isNuxtMode,
       });
       strs += str;
     });

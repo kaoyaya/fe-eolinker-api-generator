@@ -25,5 +25,7 @@ gene({
   overwrite: true,
   // post 方法是否使用json,默认为 false,使用formData
   globalPostJson: false,
+  // 是否是nuxt模式,nuxt模式会在生成接口的基础上额外传入一个context参数
+  isNuxtMode: true,
 });
 
