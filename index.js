@@ -2,6 +2,12 @@ const fs = require('fs');
 const path = require('path');
 const pathToRegexp = require('path-to-regexp');
 const mkdirp = require('mkdirp');
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
 
 const apiRequestType = {
   POST: 0,
@@ -70,6 +76,14 @@ function geneParam(params) {
   return params.map(item => item.paramKey).join(', ');
 }
 
+function geneContext(funcPa, isNuxtMode, isSecPa) {
+  let str = 'context';
+  if (funcPa || isSecPa) {
+    str = ',' + str;
+  }
+  return isNuxtMode ? str : '';
+}
+
 function geneComment({commentName, funcParams}) {
   let str = '';
   funcParams.forEach((item, i) => {
@@ -92,7 +106,8 @@ function baseGeneXhr({
   let tpl = '';
   let funcPa = geneParam(funcParams);
   let dataPa = geneParam(params);
-  let context = isNuxtMode ? ',context' : '';
+  let contextPa = geneContext(funcPa, isNuxtMode);
+  let contextAsSecXhrPa = geneContext(funcPa, isNuxtMode, true);
 
   //当为get方法时 去除链接中的query参数
   if (type == apiRequestType.GET) {
@@ -110,23 +125,23 @@ function baseGeneXhr({
   if (type === apiRequestType.POST) {
     tpl = `
   ${comment}
-  static ${funcName}(${funcPa}${context}) {
+  static ${funcName}(${funcPa}${contextPa}=null) {
     return xhr({
       method: 'post',${headerStr ? `\n      headers:${headerStr},` : ''}
       url: \`${url}\`,${isPostJson ? '' : '\n      json: false,'}
       data: ${dataPa || '{}'},
       custom: arguments[1]
-    }${context})
+    }${contextAsSecXhrPa})
   }`;
   } else if (type === apiRequestType.GET) {
     tpl = `
   ${comment}
-  static ${funcName}(${funcPa}${context}) {
+  static ${funcName}(${funcPa}${contextPa}=null) {
     return xhr({
       url: \`${url}\`,${headerStr ? `\n      headers:${headerStr},` : ''}
       params: ${dataPa || '{}'},
       custom: arguments[1]
-    }${context})
+    }${contextAsSecXhrPa})
   }`;
   }
   return tpl;
@@ -237,7 +252,22 @@ function geneApi(
     singlePostJsonFilter = isPostJson,
     isNuxtMode = defaultConfig.isNuxtMode,
   }) {
-  console.log('---------------', isNuxtMode);
+  if (isNuxtMode) {
+    rl.question('当前代码中含有要使用nuxtMode模式生成的接口，是否继续?(Y/N)', function (answer) {
+      if (answer.toLowerCase() === 'y') {
+        console.log('正在继续，请等待...');
+        rl.close();
+      } else if (answer.toLowerCase() === 'n') {
+        console.log('接口生成中断');
+        process.exit();
+      }
+    });
+    // close事件监听,不加close，则不会结束
+    rl.on('close', function () {
+      // 结束程序
+      process.exit(0);
+    });
+  }
   const outputFile = outputFileName || path.parse(entry).name;
   const exist = fs.existsSync(`./${outputFile}.js`);
   if (!overwrite) {
