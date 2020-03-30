@@ -127,19 +127,31 @@ function baseGeneXhr({
     }
   }
 
+  dataPa = dataPa ? `{ ${dataPa} }` : '{}';
+  //当header中包含{"Content-Type": "multipart/form-data"}时 创建一个formData对象来替换data
+  let multpartFormDataStr=''
+  if (type == apiRequestType.POST && dataPa!='{}' && headers.hasOwnProperty('Content-Type') && headers['Content-Type']==='multipart/form-data') {
+    multpartFormDataStr=`\n
+    const formData = new FormData();
+    const data = ${dataPa}
+    Object.keys(data).forEach((key) => {
+      formData.append(key, data[key]);
+    });`
+    dataPa='formData'
+  }
+
   funcPa = funcPa ? `{ ${funcPa} }` : '';
-  dataPa = dataPa ? `{ ${dataPa} }` : '';
   const headerStr = Object.values(headers).length ? JSON.stringify(headers) : '';
   const comment = geneComment({commentName, funcParams});
   type = Number(type);
   if (type === apiRequestType.POST) {
     tpl = `
   ${comment}
-  static ${funcName}(${funcPa}${contextPa}) {
+  static ${funcName}(${funcPa}${contextPa}) { ${multpartFormDataStr}
     return xhr({
       method: 'post',${headerStr ? `\n      headers:${headerStr},` : ''}
       url: \`${url}\`,${isPostJson ? '' : '\n      json: false,'}
-      data: ${dataPa || '{}'},
+      data: ${dataPa},
       custom: arguments[1]
     }${contextAsSecXhrPa})
   }`;
