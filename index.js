@@ -157,8 +157,7 @@ function generatorPostTpl(apiType, comment, funcName, funcPa, url, headerStr, da
       })
     },`;
     } else {
-        return `
-  ${comment}
+        return`${comment}
   static ${funcName}(${funcPa}) { ${multpartFormDataStr}
     return xhr({
       method: 'post',${headerStr ? `\n      headers:${headerStr},` : ''}
@@ -392,6 +391,7 @@ export default function ${className}($axios){
     } else {
         return `
 ${importHead}
+
 export default class ${className}{
     ${strs}
 }`

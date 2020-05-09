@@ -7,7 +7,7 @@ gene({
    * 可选参数 rest normal, 当为 rest参数时，需要在api说明中使用 `-`分割函数名，
    * 比如：`获取用户信息-getUserInfo`， 将使用 `getUserInfo`当做函数名称
    */
-  apiType: 'normal',
+  apiType: 'rest',
   // entry 接口数据文件
   entry: path.resolve(__dirname, './user.json'),
   // 生成的 class  名称
