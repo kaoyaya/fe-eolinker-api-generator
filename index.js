@@ -69,7 +69,7 @@ process.on('exit', function (code) {
 });
 
 function apiFilter(api) {
-    return [0, 6].includes(api.baseInfo.apiStatus);
+    return [0, 6].includes(parseInt(api.baseInfo.apiStatus));
 }
 
 function isPostJson(headerInfo) {
@@ -336,8 +336,11 @@ function geneApi(
         if (err) throw err;
         const apiList = JSON.parse(data.toString());
         let strs = '';
+
         apiList.filter(apiFilter).forEach((item) => {//json内容
+            console.log(item)
             const {baseInfo, headerInfo, requestInfo, restfulParam, urlParam} = item;
+
             const {apiName, apiURI, apiRequestType} = baseInfo;
             const str = geneXhr({
                 apiType,
@@ -348,6 +351,7 @@ function geneApi(
                 params: [...requestInfo, ...restfulParam || [], ...urlParam].filter(item => !item.paramKey.includes('>>')),
                 headers: headersToObject(headerInfo),
             });
+            console.log(str)
             strs += str;
         });
         mkdirp.sync(outputPath, (err) => {
