@@ -338,7 +338,6 @@ function geneApi(
         let strs = '';
 
         apiList.filter(apiFilter).forEach((item) => {//json内容
-            console.log(item)
             const {baseInfo, headerInfo, requestInfo, restfulParam, urlParam} = item;
 
             const {apiName, apiURI, apiRequestType} = baseInfo;
@@ -351,7 +350,6 @@ function geneApi(
                 params: [...requestInfo, ...restfulParam || [], ...urlParam].filter(item => !item.paramKey.includes('>>')),
                 headers: headersToObject(headerInfo),
             });
-            console.log(str)
             strs += str;
         });
         mkdirp.sync(outputPath, (err) => {
