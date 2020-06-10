@@ -1,6 +1,6 @@
 {
   "name": "@kaoyaya/fe-eolinker-api-generator",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "eolinker-api-generator",
   "main": "index.js",
   "directories": {
