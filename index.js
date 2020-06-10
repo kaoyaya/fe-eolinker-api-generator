@@ -379,6 +379,9 @@ module.exports = function (config) {
         case API_TYPE.nuxt:
             config.geneXhr = nuxtGeneXhr
             break;
+        default:
+            config.geneXhr = normalGeneXhr
+            break;
     }
     return geneApi(config);
 };
