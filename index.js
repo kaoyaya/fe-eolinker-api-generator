@@ -128,7 +128,7 @@ function baseGeneXhr({
     const comment = geneComment({commentName, funcParams});
     type = Number(type);
     if (type === apiRequestType.POST) {
-        tpl = generatorPostTpl(apiType, comment, funcName, funcPa, url, headerStr, dataPa, multpartFormDataStr);
+        tpl = generatorPostTpl(apiType, comment, funcName, funcPa, url, headerStr, dataPa, multpartFormDataStr,isPostJson);
     } else if (type === apiRequestType.GET) {
         tpl = generatorGetTpl(apiType, comment, funcName, funcPa, url, headerStr, dataPa)
     }
@@ -144,7 +144,7 @@ function generatorMultipart(dataPa) {
     });`
 }
 
-function generatorPostTpl(apiType, comment, funcName, funcPa, url, headerStr, dataPa, multpartFormDataStr) {
+function generatorPostTpl(apiType, comment, funcName, funcPa, url, headerStr, dataPa, multpartFormDataStr,isPostJson) {
     if (apiType === API_TYPE.nuxt) {
         return `
    ${comment}

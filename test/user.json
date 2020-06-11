@@ -1,83 +1,27 @@
 [
   {
     "baseInfo": {
-      "apiName": "\u65b0\u83dc\u5355\u5217\u8868",
-      "apiURI": "\/api\/access\/menu\/menuList",
+      "apiName": "\u70ed\u95e8\u95ee\u7b54-hot",
+      "apiURI": "\/knew\/home\/qa\/hot",
       "apiProtocol": 0,
       "apiSuccessMock": "",
       "apiFailureMock": "",
       "apiRequestType": 1,
-      "apiStatus": "6",
+      "apiStatus": 0,
       "starred": 0,
-      "createTime": "2020-06-09 17:02:20",
-      "apiNoteType": 1,
+      "apiNoteType": 0,
       "apiNoteRaw": "",
       "apiNote": "",
       "apiRequestParamType": 0,
       "apiRequestRaw": "",
-      "apiRequestBinary": null,
       "apiFailureStatusCode": "200",
       "apiSuccessStatusCode": "200",
       "apiFailureContentType": "text\/html; charset=UTF-8",
       "apiSuccessContentType": "text\/html; charset=UTF-8",
-      "apiRequestParamJsonType": 0,
+      "apiRequestParamJsonType": "0",
       "beforeInject": null,
       "afterInject": null,
-      "apiUpdateTime": "2020-06-09 17:02:20",
-      "apiTag": "",
-      "advancedSetting": null
-    },
-    "headerInfo": [],
-    "authInfo": {
-      "status": "0"
-    },
-    "requestInfo": [],
-    "urlParam": [],
-    "restfulParam": [],
-    "resultInfo": [],
-    "responseHeader": [],
-    "resultParamJsonType": 0,
-    "resultParamType": 0,
-    "structureID": "[]",
-    "databaseFieldID": "[]",
-    "globalStructureID": "[]",
-    "fileID": null,
-    "dataStructureList": [],
-    "globalDataStructureList": [],
-    "testCastList": [],
-    "mockExpectationList": [],
-    "apiManagerID": 38194,
-    "createUserID": 38194,
-    "updateUserID": 38194,
-    "apiType": "http"
-  },
-  {
-    "baseInfo": {
-      "apiName": "\u521b\u5efa\u4e00\u4e2a\u83dc\u5355",
-      "apiURI": "\/api\/access\/menu\/createMenu",
-      "apiProtocol": 0,
-      "apiSuccessMock": "",
-      "apiFailureMock": "",
-      "apiRequestType": 0,
-      "apiStatus": "6",
-      "starred": 0,
-      "apiNoteType": 1,
-      "apiNoteRaw": "",
-      "apiNote": "",
-      "apiRequestParamType": 2,
-      "apiRequestRaw": "",
-      "apiRequestBinary": null,
-      "apiFailureStatusCode": "200",
-      "apiSuccessStatusCode": "200",
-      "apiFailureContentType": "text\/html; charset=UTF-8",
-      "apiSuccessContentType": "text\/html; charset=UTF-8",
-      "apiRequestParamJsonType": 0,
-      "advancedSetting": null,
-      "beforeInject": null,
-      "afterInject": null,
-      "createTime": "2020-06-09 17:05:46",
-      "apiUpdateTime": "2020-06-10 10:29:51",
-      "apiTag": ""
+      "apiUpdateTime": "2019-01-17 14:16:41"
     },
     "responseHeader": [],
     "headerInfo": [],
@@ -88,121 +32,56 @@
       {
         "paramNotNull": "0",
         "paramType": "3",
-        "paramName": "pid",
-        "paramKey": "pid",
-        "paramValue": "",
+        "paramName": "\u73ed\u7ea7\u7f16\u53f7",
+        "paramKey": "classId",
+        "paramValue": "1",
         "paramLimit": "",
-        "paramNote": "",
         "paramValueList": [],
-        "default": 0,
-        "childList": []
-      },
-      {
-        "paramNotNull": "0",
-        "paramType": "0",
-        "paramName": "\u83dc\u5355\u540d\u79f0",
-        "paramKey": "name",
-        "paramValue": "",
-        "paramLimit": "",
-        "paramNote": "",
-        "paramValueList": [],
-        "default": 0,
-        "childList": []
-      },
-      {
-        "paramNotNull": "0",
-        "paramType": "0",
-        "paramName": "\u6807\u9898",
-        "paramKey": "title",
-        "paramValue": "",
-        "paramLimit": "",
-        "paramNote": "",
-        "paramValueList": [],
-        "default": 0,
-        "childList": []
-      },
-      {
-        "paramNotNull": "0",
-        "paramType": "3",
-        "paramName": "\u72b6\u6001",
-        "paramKey": "status",
-        "paramValue": "",
-        "paramLimit": "",
-        "paramNote": "",
-        "paramValueList": [],
-        "default": 0,
-        "childList": []
-      },
-      {
-        "paramNotNull": "0",
-        "paramType": "0",
-        "paramName": "\u5907\u6ce8",
-        "paramKey": "remark",
-        "paramValue": "",
-        "paramLimit": "",
-        "paramNote": "",
-        "paramValueList": [],
-        "default": 0,
-        "childList": []
-      },
-      {
-        "paramNotNull": "0",
-        "paramType": "3",
-        "paramName": "",
-        "paramKey": "blank",
-        "paramValue": "",
-        "paramLimit": "",
-        "paramNote": "",
-        "paramValueList": [],
-        "default": 0,
-        "childList": []
+        "default": 0
       }
     ],
     "urlParam": [],
     "restfulParam": [],
     "resultInfo": [],
-    "resultParamJsonType": 0,
-    "resultParamType": 0,
-    "structureID": "[]",
-    "databaseFieldID": "[]",
-    "globalStructureID": "[]",
-    "fileID": null,
-    "dataStructureList": [],
-    "globalDataStructureList": [],
+    "mockInfo": {
+      "rule": [
+        {
+          "paramKey": "",
+          "paramType": "0"
+        }
+      ],
+      "result": "{}",
+      "mockConfig": {
+        "rule": "",
+        "type": "object"
+      }
+    },
     "testCastList": [],
-    "mockExpectationList": [],
-    "apiManagerID": 38194,
-    "createUserID": 38194,
-    "updateUserID": 38194,
-    "apiType": "http"
+    "dataStructureList": []
   },
   {
     "baseInfo": {
-      "apiName": "\u66f4\u65b0\u4e00\u4e2a\u83dc\u5355",
-      "apiURI": "\/api\/access\/menu\/updateMenu",
+      "apiName": "\u6700\u8fd1\u4e00\u5468\u95ee\u7b54-recently",
+      "apiURI": "\/knew\/home\/qa\/recently",
       "apiProtocol": 0,
       "apiSuccessMock": "",
       "apiFailureMock": "",
-      "apiRequestType": 0,
-      "apiStatus": "6",
+      "apiRequestType": 1,
+      "apiStatus": 0,
       "starred": 0,
-      "apiNoteType": 1,
+      "apiNoteType": 0,
       "apiNoteRaw": "",
       "apiNote": "",
-      "apiRequestParamType": 2,
+      "apiRequestParamType": 0,
       "apiRequestRaw": "",
-      "apiRequestBinary": null,
       "apiFailureStatusCode": "200",
       "apiSuccessStatusCode": "200",
       "apiFailureContentType": "text\/html; charset=UTF-8",
       "apiSuccessContentType": "text\/html; charset=UTF-8",
-      "apiRequestParamJsonType": 0,
-      "advancedSetting": null,
-      "beforeInject": null,
-      "afterInject": null,
-      "createTime": "2020-06-09 17:05:46",
-      "apiUpdateTime": "2020-06-10 10:29:32",
-      "apiTag": ""
+      "apiRequestParamJsonType": "0",
+      "beforeInject": "",
+      "afterInject": "",
+      "apiUpdateTime": "2019-01-17 14:16:28"
     },
     "responseHeader": [],
     "headerInfo": [],
@@ -213,189 +92,348 @@
       {
         "paramNotNull": "0",
         "paramType": "3",
-        "paramName": "id",
+        "paramName": "\u73ed\u7ea7\u7f16\u53f7",
+        "paramKey": "classId",
+        "paramValue": "1",
+        "paramLimit": "",
+        "paramValueList": [],
+        "default": 0
+      },
+      {
+        "paramNotNull": "0",
+        "paramType": "3",
+        "paramName": "\u5206\u9875",
+        "paramKey": "p",
+        "paramValue": "1",
+        "paramLimit": "",
+        "paramValueList": [],
+        "default": 0
+      }
+    ],
+    "urlParam": [],
+    "restfulParam": [],
+    "resultInfo": [],
+    "mockInfo": {
+      "rule": [
+        {
+          "paramKey": "",
+          "paramType": "0"
+        }
+      ],
+      "result": "{}",
+      "mockConfig": {
+        "type": "object",
+        "rule": ""
+      }
+    },
+    "testCastList": [],
+    "dataStructureList": []
+  },
+  {
+    "baseInfo": {
+      "apiName": "\u63d0\u4ea4\u95ee\u9898-create",
+      "apiURI": "\/knew\/home\/qa\/create",
+      "apiProtocol": 0,
+      "apiSuccessMock": "",
+      "apiFailureMock": "",
+      "apiRequestType": 0,
+      "apiStatus": 0,
+      "starred": 0,
+      "apiNoteType": 0,
+      "apiNoteRaw": "",
+      "apiNote": "",
+      "apiRequestParamType": 0,
+      "apiRequestRaw": "",
+      "apiFailureStatusCode": "200",
+      "apiSuccessStatusCode": "200",
+      "apiFailureContentType": "text\/html; charset=UTF-8",
+      "apiSuccessContentType": "text\/html; charset=UTF-8",
+      "apiRequestParamJsonType": "0",
+      "beforeInject": "",
+      "afterInject": "",
+      "apiUpdateTime": "2019-01-17 14:16:21"
+    },
+    "responseHeader": [],
+    "headerInfo": [],
+    "authInfo": {
+      "status": "0"
+    },
+    "requestInfo": [
+      {
+        "paramNotNull": "0",
+        "paramType": "3",
+        "paramName": "\u73ed\u7ea7\u7f16\u53f7",
+        "paramKey": "classId",
+        "paramValue": "1",
+        "paramLimit": "",
+        "paramValueList": [],
+        "default": 0
+      },
+      {
+        "paramNotNull": "0",
+        "paramType": "0",
+        "paramName": "\u95ee\u9898\u5185\u5bb9",
+        "paramKey": "content",
+        "paramValue": "\u95ee\u9898",
+        "paramLimit": "",
+        "paramValueList": [],
+        "default": 0
+      },
+      {
+        "paramNotNull": "1",
+        "paramType": "0",
+        "paramName": "\u56fe\u7247\u9644\u4ef6",
+        "paramKey": "images",
+        "paramValue": "1, 2, 3",
+        "paramLimit": "",
+        "paramValueList": [],
+        "default": 0
+      }
+    ],
+    "urlParam": [],
+    "restfulParam": [],
+    "resultInfo": [],
+    "mockInfo": {
+      "rule": [
+        {
+          "paramKey": "",
+          "paramType": "0"
+        }
+      ],
+      "result": "{}",
+      "mockConfig": {
+        "type": "object",
+        "rule": ""
+      }
+    },
+    "testCastList": [],
+    "dataStructureList": []
+  },
+  {
+    "baseInfo": {
+      "apiName": "\u6211\u7684\u63d0\u95ee-myQuestion",
+      "apiURI": "\/knew\/home\/qa\/myQuestion",
+      "apiProtocol": 0,
+      "apiSuccessMock": "",
+      "apiFailureMock": "",
+      "apiRequestType": 1,
+      "apiStatus": 0,
+      "starred": 0,
+      "apiNoteType": 0,
+      "apiNoteRaw": "",
+      "apiNote": "",
+      "apiRequestParamType": 0,
+      "apiRequestRaw": "",
+      "apiFailureStatusCode": "200",
+      "apiSuccessStatusCode": "200",
+      "apiFailureContentType": "text\/html; charset=UTF-8",
+      "apiSuccessContentType": "text\/html; charset=UTF-8",
+      "apiRequestParamJsonType": "0",
+      "beforeInject": "",
+      "afterInject": "",
+      "apiUpdateTime": "2019-01-17 14:16:13"
+    },
+    "responseHeader": [],
+    "headerInfo": [],
+    "authInfo": {
+      "status": "0"
+    },
+    "requestInfo": [
+      {
+        "paramNotNull": "0",
+        "paramType": "3",
+        "paramName": "\u73ed\u7ea7\u7f16\u53f7",
+        "paramKey": "classId",
+        "paramValue": "1",
+        "paramLimit": "",
+        "paramValueList": [],
+        "default": 0
+      },
+      {
+        "paramNotNull": "0",
+        "paramType": "3",
+        "paramName": "\u5206\u9875",
+        "paramKey": "p",
+        "paramValue": "1",
+        "paramLimit": "",
+        "paramValueList": [],
+        "default": 0
+      }
+    ],
+    "urlParam": [],
+    "restfulParam": [],
+    "resultInfo": [],
+    "mockInfo": {
+      "rule": [
+        {
+          "paramKey": "",
+          "paramType": "0"
+        }
+      ],
+      "result": "{}",
+      "mockConfig": {
+        "type": "object",
+        "rule": ""
+      }
+    },
+    "testCastList": [],
+    "dataStructureList": []
+  },
+  {
+    "baseInfo": {
+      "apiName": "\u6211\u7684\u8ba8\u8bba-myAnswer",
+      "apiURI": "\/knew\/home\/qa\/myAnswer",
+      "apiProtocol": 0,
+      "apiSuccessMock": "",
+      "apiFailureMock": "",
+      "apiRequestType": 1,
+      "apiStatus": 0,
+      "starred": 0,
+      "apiNoteType": 0,
+      "apiNoteRaw": "",
+      "apiNote": "",
+      "apiRequestParamType": 0,
+      "apiRequestRaw": "",
+      "apiFailureStatusCode": "200",
+      "apiSuccessStatusCode": "200",
+      "apiFailureContentType": "text\/html; charset=UTF-8",
+      "apiSuccessContentType": "text\/html; charset=UTF-8",
+      "apiRequestParamJsonType": "0",
+      "beforeInject": "",
+      "afterInject": "",
+      "apiUpdateTime": "2019-01-17 14:16:05"
+    },
+    "responseHeader": [],
+    "headerInfo": [],
+    "authInfo": {
+      "status": "0"
+    },
+    "requestInfo": [
+      {
+        "paramNotNull": "0",
+        "paramType": "3",
+        "paramName": "\u73ed\u7ea7\u7f16\u53f7",
+        "paramKey": "classId",
+        "paramValue": "1",
+        "paramLimit": "",
+        "paramValueList": [],
+        "default": 0
+      },
+      {
+        "paramNotNull": "0",
+        "paramType": "3",
+        "paramName": "\u5206\u9875",
+        "paramKey": "p",
+        "paramValue": "1",
+        "paramLimit": "",
+        "paramValueList": [],
+        "default": 0
+      }
+    ],
+    "urlParam": [],
+    "restfulParam": [],
+    "resultInfo": [],
+    "mockInfo": {
+      "rule": [
+        {
+          "paramKey": "",
+          "paramType": "0"
+        }
+      ],
+      "result": "{}",
+      "mockConfig": {
+        "type": "object",
+        "rule": ""
+      }
+    },
+    "testCastList": [],
+    "dataStructureList": []
+  },
+  {
+    "baseInfo": {
+      "apiName": "\u95ee\u7b54\u8be6\u60c5-detail",
+      "apiURI": "\/knew\/home\/qa\/detail",
+      "apiProtocol": 0,
+      "apiSuccessMock": "",
+      "apiFailureMock": "",
+      "apiRequestType": 1,
+      "apiStatus": 0,
+      "starred": 0,
+      "apiNoteType": 0,
+      "apiNoteRaw": "",
+      "apiNote": "\u9700\u8981\u6dfb\u52a0\u6d4f\u89c8\u6b21\u6570",
+      "apiRequestParamType": 0,
+      "apiRequestRaw": "",
+      "apiFailureStatusCode": "200",
+      "apiSuccessStatusCode": "200",
+      "apiFailureContentType": "text\/html; charset=UTF-8",
+      "apiSuccessContentType": "text\/html; charset=UTF-8",
+      "apiRequestParamJsonType": "0",
+      "beforeInject": "",
+      "afterInject": "",
+      "apiUpdateTime": "2019-01-17 14:15:55"
+    },
+    "responseHeader": [],
+    "headerInfo": [],
+    "authInfo": {
+      "status": "0"
+    },
+    "requestInfo": [
+      {
+        "paramNotNull": "0",
+        "paramType": "0",
+        "paramName": "\u95ee\u9898\u7f16\u53f7",
         "paramKey": "id",
-        "paramValue": "",
+        "paramValue": "1",
         "paramLimit": "",
-        "paramNote": "",
         "paramValueList": [],
-        "default": 0,
-        "childList": []
-      },
-      {
-        "paramNotNull": "0",
-        "paramType": "0",
-        "paramName": "\u83dc\u5355\u540d\u79f0",
-        "paramKey": "name",
-        "paramValue": "",
-        "paramLimit": "",
-        "paramNote": "",
-        "paramValueList": [],
-        "default": 0,
-        "childList": []
-      },
-      {
-        "paramNotNull": "0",
-        "paramType": "0",
-        "paramName": "\u6807\u9898",
-        "paramKey": "title",
-        "paramValue": "",
-        "paramLimit": "",
-        "paramNote": "",
-        "paramValueList": [],
-        "default": 0,
-        "childList": []
-      },
-      {
-        "paramNotNull": "0",
-        "paramType": "3",
-        "paramName": "\u72b6\u6001",
-        "paramKey": "status",
-        "paramValue": "",
-        "paramLimit": "",
-        "paramNote": "",
-        "paramValueList": [],
-        "default": 0,
-        "childList": []
-      },
-      {
-        "paramNotNull": "0",
-        "paramType": "0",
-        "paramName": "\u5907\u6ce8",
-        "paramKey": "remark",
-        "paramValue": "",
-        "paramLimit": "",
-        "paramNote": "",
-        "paramValueList": [],
-        "default": 0,
-        "childList": []
-      },
-      {
-        "paramNotNull": "0",
-        "paramType": "3",
-        "paramName": "",
-        "paramKey": "blank",
-        "paramValue": "",
-        "paramLimit": "",
-        "paramNote": "",
-        "paramValueList": [],
-        "default": 0,
-        "childList": []
+        "default": 0
       }
     ],
     "urlParam": [],
     "restfulParam": [],
     "resultInfo": [],
-    "resultParamJsonType": 0,
-    "resultParamType": 0,
-    "structureID": "[]",
-    "databaseFieldID": "[]",
-    "globalStructureID": "[]",
-    "fileID": null,
-    "dataStructureList": [],
-    "globalDataStructureList": [],
+    "mockInfo": {
+      "rule": [
+        {
+          "paramKey": "",
+          "paramType": "0"
+        }
+      ],
+      "result": "{}",
+      "mockConfig": {
+        "type": "object",
+        "rule": ""
+      }
+    },
     "testCastList": [],
-    "mockExpectationList": [],
-    "apiManagerID": 38194,
-    "createUserID": 38194,
-    "updateUserID": 38194,
-    "apiType": "http"
+    "dataStructureList": []
   },
   {
     "baseInfo": {
-      "apiName": "\u83dc\u5355\u6392\u5e8f",
-      "apiURI": "\/api\/access\/menu\/sortMenu",
+      "apiName": "\u6dfb\u52a0\u8ba8\u8bba-createAnswer",
+      "apiURI": "\/knew\/home\/qa\/createAnswer",
       "apiProtocol": 0,
       "apiSuccessMock": "",
       "apiFailureMock": "",
       "apiRequestType": 0,
-      "apiStatus": "6",
+      "apiStatus": 0,
       "starred": 0,
-      "createTime": "2020-04-26 15:36:36",
-      "apiNoteType": 1,
+      "apiNoteType": 0,
       "apiNoteRaw": "",
       "apiNote": "",
-      "apiRequestParamType": 2,
+      "apiRequestParamType": 0,
       "apiRequestRaw": "",
-      "apiRequestBinary": null,
       "apiFailureStatusCode": "200",
       "apiSuccessStatusCode": "200",
       "apiFailureContentType": "text\/html; charset=UTF-8",
       "apiSuccessContentType": "text\/html; charset=UTF-8",
-      "apiRequestParamJsonType": 0,
-      "beforeInject": null,
-      "afterInject": null,
-      "apiUpdateTime": "2020-04-26 15:36:36",
-      "apiTag": "",
-      "advancedSetting": {
-        "requestRedirect": 1
-      }
+      "apiRequestParamJsonType": "0",
+      "beforeInject": "",
+      "afterInject": "",
+      "apiUpdateTime": "2019-01-17 14:15:40"
     },
-    "headerInfo": [],
-    "authInfo": {
-      "status": "0"
-    },
-    "requestInfo": [
-      {
-        "paramNotNull": "0",
-        "paramType": "12",
-        "paramName": "\u8282\u70b9id",
-        "paramKey": "idList",
-        "paramValue": "",
-        "paramLimit": "",
-        "paramNote": "",
-        "paramValueList": [],
-        "default": 0,
-        "childList": []
-      }
-    ],
-    "urlParam": [],
-    "restfulParam": [],
-    "resultInfo": [],
     "responseHeader": [],
-    "resultParamJsonType": 0,
-    "resultParamType": 0,
-    "structureID": "[]",
-    "databaseFieldID": "[]",
-    "globalStructureID": "[]",
-    "fileID": null,
-    "dataStructureList": [],
-    "globalDataStructureList": [],
-    "testCastList": [],
-    "mockExpectationList": [],
-    "apiManagerID": 38197,
-    "createUserID": 38197,
-    "updateUserID": 38194,
-    "apiType": "http"
-  },
-  {
-    "baseInfo": {
-      "apiName": "\u6279\u91cf\u5173\u8054\u6743\u9650\u8282\u70b9",
-      "apiURI": "\/api\/access\/menu\/batchAddNode",
-      "apiProtocol": 0,
-      "apiSuccessMock": "",
-      "apiFailureMock": "",
-      "apiRequestType": 0,
-      "apiStatus": "6",
-      "starred": 0,
-      "createTime": "2020-06-09 17:09:14",
-      "apiNoteType": 1,
-      "apiNoteRaw": "",
-      "apiNote": "",
-      "apiRequestParamType": 2,
-      "apiRequestRaw": "",
-      "apiRequestBinary": null,
-      "apiFailureStatusCode": "200",
-      "apiSuccessStatusCode": "200",
-      "apiFailureContentType": "text\/html; charset=UTF-8",
-      "apiSuccessContentType": "text\/html; charset=UTF-8",
-      "apiRequestParamJsonType": 0,
-      "beforeInject": null,
-      "afterInject": null,
-      "apiUpdateTime": "2020-06-09 17:09:14",
-      "apiTag": "",
-      "advancedSetting": null
-    },
     "headerInfo": [],
     "authInfo": {
       "status": "0"
@@ -403,21 +441,109 @@
     "requestInfo": [
       {
         "paramNotNull": "0",
-        "paramType": "3",
-        "paramName": "\u83dc\u5355id",
-        "paramKey": "menuID",
-        "paramValue": "",
+        "paramType": "0",
+        "paramName": "\u95ee\u9898\u7f16\u53f7",
+        "paramKey": "questionId",
+        "paramValue": "1",
         "paramLimit": "",
-        "paramNote": "",
         "paramValueList": [],
-        "default": 0,
-        "childList": []
+        "default": 0
+      },
+      {
+        "paramNotNull": "0",
+        "paramType": "0",
+        "paramName": "\u8ba8\u8bba\u5185\u5bb9",
+        "paramKey": "content",
+        "paramValue": "\u95ee\u98981\u7684\u56de\u7b54",
+        "paramLimit": "",
+        "paramValueList": [],
+        "default": 0
+      },
+      {
+        "paramNotNull": "0",
+        "paramType": "0",
+        "paramName": "\u56fe\u7247\u9644\u4ef6",
+        "paramKey": "images",
+        "paramValue": "1, 2, 3",
+        "paramLimit": "",
+        "paramValueList": [],
+        "default": 0
+      }
+    ],
+    "urlParam": [],
+    "restfulParam": [],
+    "resultInfo": [],
+    "mockInfo": {
+      "rule": [
+        {
+          "paramKey": "",
+          "paramType": "0"
+        }
+      ],
+      "result": "{}",
+      "mockConfig": {
+        "type": "object",
+        "rule": ""
+      }
+    },
+    "testCastList": [],
+    "dataStructureList": []
+  },
+  {
+    "baseInfo": {
+      "apiName": "\u8ffd\u95ee\u8ffd\u7b54-createQuestionPlus",
+      "apiURI": "\/knew\/home\/qa\/createQuestionPlus",
+      "apiProtocol": 0,
+      "apiSuccessMock": "",
+      "apiFailureMock": "",
+      "apiRequestType": 0,
+      "apiStatus": 6,
+      "starred": 0,
+      "apiNoteType": 0,
+      "apiNoteRaw": "",
+      "apiNote": "",
+      "apiRequestParamType": 0,
+      "apiRequestRaw": "",
+      "apiFailureStatusCode": "200",
+      "apiSuccessStatusCode": "200",
+      "apiFailureContentType": "text\/html; charset=UTF-8",
+      "apiSuccessContentType": "text\/html; charset=UTF-8",
+      "apiRequestParamJsonType": "0",
+      "beforeInject": "",
+      "afterInject": "",
+      "apiUpdateTime": "2019-01-17 14:39:01"
+    },
+    "responseHeader": [],
+    "headerInfo": [],
+    "authInfo": {
+      "status": "0"
+    },
+    "requestInfo": [
+      {
+        "paramNotNull": "0",
+        "paramType": "0",
+        "paramName": "\u56de\u7b54\u7f16\u53f7",
+        "paramKey": "answerId",
+        "paramValue": "7",
+        "paramLimit": "",
+        "paramValueList": [],
+        "default": 0
+      },
+      {
+        "paramNotNull": "0",
+        "paramType": "0",
+        "paramName": "\u5185\u5bb9",
+        "paramKey": "content",
+        "paramValue": "\u56de\u7b547\u7684\u8ffd\u95ee\u8ffd\u7b54",
+        "paramLimit": "",
+        "paramValueList": [],
+        "default": 0
       },
       {
         "paramNotNull": "0",
         "paramType": "12",
-        "paramName": "j\u63a5\u53e3id\u6570\u7ec4",
-        "paramKey": "nodeIDList",
+        "paramName": "\u56fe\u7247",
+        "paramKey": "images",
         "paramValue": "",
         "paramLimit": "",
         "paramNote": "",
@@ -429,413 +555,20 @@
     "urlParam": [],
     "restfulParam": [],
     "resultInfo": [],
-    "responseHeader": [],
-    "resultParamJsonType": 0,
-    "resultParamType": 0,
-    "structureID": "[]",
-    "databaseFieldID": "[]",
-    "globalStructureID": "[]",
-    "fileID": null,
-    "dataStructureList": [],
-    "globalDataStructureList": [],
-    "testCastList": [],
-    "mockExpectationList": [],
-    "apiManagerID": 38194,
-    "createUserID": 38194,
-    "updateUserID": 38194,
-    "apiType": "http"
-  },
-  {
-    "baseInfo": {
-      "apiName": "\u6279\u91cf\u53d6\u6d88\u5173\u8054\u63a5\u53e3",
-      "apiURI": "\/api\/access\/menu\/batchDeleteNode",
-      "apiProtocol": 0,
-      "apiSuccessMock": "",
-      "apiFailureMock": "",
-      "apiRequestType": 0,
-      "apiStatus": "6",
-      "starred": 0,
-      "createTime": "2020-06-09 17:09:14",
-      "apiNoteType": 1,
-      "apiNoteRaw": "",
-      "apiNote": "",
-      "apiRequestParamType": 2,
-      "apiRequestRaw": "",
-      "apiRequestBinary": null,
-      "apiFailureStatusCode": "200",
-      "apiSuccessStatusCode": "200",
-      "apiFailureContentType": "text\/html; charset=UTF-8",
-      "apiSuccessContentType": "text\/html; charset=UTF-8",
-      "apiRequestParamJsonType": 0,
-      "beforeInject": null,
-      "afterInject": null,
-      "apiUpdateTime": "2020-06-09 17:09:14",
-      "apiTag": "",
-      "advancedSetting": null
-    },
-    "headerInfo": [],
-    "authInfo": {
-      "status": "0"
-    },
-    "requestInfo": [
-      {
-        "paramNotNull": "0",
-        "paramType": "3",
-        "paramName": "\u83dc\u5355id",
-        "paramKey": "menuID",
-        "paramValue": "",
-        "paramLimit": "",
-        "paramNote": "",
-        "paramValueList": [],
-        "default": 0,
-        "childList": []
-      },
-      {
-        "paramNotNull": "0",
-        "paramType": "12",
-        "paramName": "j\u63a5\u53e3id\u6570\u7ec4",
-        "paramKey": "nodeIDList",
-        "paramValue": "",
-        "paramLimit": "",
-        "paramNote": "",
-        "paramValueList": [],
-        "default": 0,
-        "childList": []
+    "mockInfo": {
+      "rule": [
+        {
+          "paramKey": "",
+          "paramType": "0"
+        }
+      ],
+      "result": "{}",
+      "mockConfig": {
+        "type": "object",
+        "rule": ""
       }
-    ],
-    "urlParam": [],
-    "restfulParam": [],
-    "resultInfo": [],
-    "responseHeader": [],
-    "resultParamJsonType": 0,
-    "resultParamType": 0,
-    "structureID": "[]",
-    "databaseFieldID": "[]",
-    "globalStructureID": "[]",
-    "fileID": null,
-    "dataStructureList": [],
-    "globalDataStructureList": [],
+    },
     "testCastList": [],
-    "mockExpectationList": [],
-    "apiManagerID": 38194,
-    "createUserID": 38194,
-    "updateUserID": 38194,
-    "apiType": "http"
-  },
-  {
-    "baseInfo": {
-      "apiName": "\u63a5\u53e3\u5217\u8868",
-      "apiURI": "\/api\/access\/apiNode\/apiNodeList",
-      "apiProtocol": 0,
-      "apiSuccessMock": "",
-      "apiFailureMock": "",
-      "apiRequestType": 0,
-      "apiStatus": "6",
-      "starred": 0,
-      "apiNoteType": 1,
-      "apiNoteRaw": "",
-      "apiNote": "",
-      "apiRequestParamType": 2,
-      "apiRequestRaw": "",
-      "apiRequestBinary": null,
-      "apiFailureStatusCode": "200",
-      "apiSuccessStatusCode": "200",
-      "apiFailureContentType": "text\/html; charset=UTF-8",
-      "apiSuccessContentType": "text\/html; charset=UTF-8",
-      "apiRequestParamJsonType": 0,
-      "advancedSetting": null,
-      "beforeInject": null,
-      "afterInject": null,
-      "createTime": "2020-06-09 17:11:58",
-      "apiUpdateTime": "2020-06-10 10:56:21",
-      "apiTag": ""
-    },
-    "responseHeader": [],
-    "headerInfo": [],
-    "authInfo": {
-      "status": "0"
-    },
-    "requestInfo": [
-      {
-        "paramNotNull": "0",
-        "paramType": "8",
-        "paramName": "\u662f\u5426\u516c\u5171\u6a21\u5757",
-        "paramKey": "isPublic",
-        "paramValue": "",
-        "paramLimit": "",
-        "paramNote": "",
-        "paramValueList": [],
-        "default": 0,
-        "childList": []
-      },
-      {
-        "paramNotNull": "0",
-        "paramType": "3",
-        "paramName": "",
-        "paramKey": "page",
-        "paramValue": "",
-        "paramLimit": "",
-        "paramNote": "",
-        "paramValueList": [],
-        "default": 0,
-        "childList": []
-      },
-      {
-        "paramNotNull": "0",
-        "paramType": "3",
-        "paramName": "",
-        "paramKey": "pageSize",
-        "paramValue": "",
-        "paramLimit": "",
-        "paramNote": "",
-        "paramValueList": [],
-        "default": 0,
-        "childList": []
-      },
-      {
-        "paramNotNull": "0",
-        "paramType": "0",
-        "paramName": "",
-        "paramKey": "keywork",
-        "paramValue": "",
-        "paramLimit": "",
-        "paramNote": "",
-        "paramValueList": [],
-        "default": 0,
-        "childList": []
-      },
-      {
-        "paramNotNull": "0",
-        "paramType": "3",
-        "paramName": "",
-        "paramKey": "searchType",
-        "paramValue": "",
-        "paramLimit": "",
-        "paramNote": "",
-        "paramValueList": [],
-        "default": 0,
-        "childList": []
-      }
-    ],
-    "urlParam": [],
-    "restfulParam": [],
-    "resultInfo": [],
-    "resultParamJsonType": 0,
-    "resultParamType": 0,
-    "structureID": "[]",
-    "databaseFieldID": "[]",
-    "globalStructureID": "[]",
-    "fileID": null,
-    "dataStructureList": [],
-    "globalDataStructureList": [],
-    "testCastList": [],
-    "mockExpectationList": [],
-    "apiManagerID": 38194,
-    "createUserID": 38194,
-    "updateUserID": 38194,
-    "apiType": "http"
-  },
-  {
-    "baseInfo": {
-      "apiName": "\u6279\u91cf\u6dfb\u52a0\u63a5\u53e3",
-      "apiURI": "\/api\/access\/apiNode\/batcheAddApiNode",
-      "apiProtocol": 0,
-      "apiSuccessMock": "",
-      "apiFailureMock": "",
-      "apiRequestType": 0,
-      "apiStatus": "6",
-      "starred": 0,
-      "createTime": "2020-06-09 17:14:29",
-      "apiNoteType": 1,
-      "apiNoteRaw": "",
-      "apiNote": "",
-      "apiRequestParamType": 2,
-      "apiRequestRaw": "",
-      "apiRequestBinary": null,
-      "apiFailureStatusCode": "200",
-      "apiSuccessStatusCode": "200",
-      "apiFailureContentType": "text\/html; charset=UTF-8",
-      "apiSuccessContentType": "text\/html; charset=UTF-8",
-      "apiRequestParamJsonType": 0,
-      "beforeInject": null,
-      "afterInject": null,
-      "apiUpdateTime": "2020-06-09 17:14:29",
-      "apiTag": "",
-      "advancedSetting": null
-    },
-    "headerInfo": [],
-    "authInfo": {
-      "status": "0"
-    },
-    "requestInfo": [
-      {
-        "paramNotNull": "0",
-        "paramType": "12",
-        "paramName": "",
-        "paramKey": "data",
-        "paramValue": "",
-        "paramLimit": "",
-        "paramNote": "",
-        "paramValueList": [],
-        "default": 0,
-        "childList": [
-          {
-            "paramNotNull": "0",
-            "paramType": "0",
-            "paramName": "",
-            "paramKey": "name",
-            "paramValue": "",
-            "paramLimit": "",
-            "paramNote": "",
-            "paramValueList": [],
-            "default": 0,
-            "childList": []
-          },
-          {
-            "paramNotNull": "0",
-            "paramType": "0",
-            "paramName": "",
-            "paramKey": "path",
-            "paramValue": "",
-            "paramLimit": "",
-            "paramNote": "",
-            "paramValueList": [],
-            "default": 0,
-            "childList": []
-          },
-          {
-            "paramNotNull": "0",
-            "paramType": "8",
-            "paramName": "",
-            "paramKey": "public",
-            "paramValue": "",
-            "paramLimit": "",
-            "paramNote": "",
-            "paramValueList": [],
-            "default": 0,
-            "childList": []
-          }
-        ]
-      }
-    ],
-    "urlParam": [],
-    "restfulParam": [],
-    "resultInfo": [],
-    "responseHeader": [],
-    "resultParamJsonType": 0,
-    "resultParamType": 0,
-    "structureID": "[]",
-    "databaseFieldID": "[]",
-    "globalStructureID": "[]",
-    "fileID": null,
-    "dataStructureList": [],
-    "globalDataStructureList": [],
-    "testCastList": [],
-    "mockExpectationList": [],
-    "apiManagerID": 38194,
-    "createUserID": 38194,
-    "updateUserID": 38194,
-    "apiType": "http"
-  },
-  {
-    "baseInfo": {
-      "apiName": "\u66f4\u65b0\u63a5\u53e3",
-      "apiURI": "\/api\/access\/apiNode\/updateApiNode",
-      "apiProtocol": 0,
-      "apiSuccessMock": "",
-      "apiFailureMock": "",
-      "apiRequestType": 0,
-      "apiStatus": "6",
-      "starred": 0,
-      "createTime": "2020-06-09 17:15:39",
-      "apiNoteType": 1,
-      "apiNoteRaw": "",
-      "apiNote": "",
-      "apiRequestParamType": 2,
-      "apiRequestRaw": "",
-      "apiRequestBinary": null,
-      "apiFailureStatusCode": "200",
-      "apiSuccessStatusCode": "200",
-      "apiFailureContentType": "text\/html; charset=UTF-8",
-      "apiSuccessContentType": "text\/html; charset=UTF-8",
-      "apiRequestParamJsonType": 0,
-      "beforeInject": null,
-      "afterInject": null,
-      "apiUpdateTime": "2020-06-09 17:15:39",
-      "apiTag": "",
-      "advancedSetting": null
-    },
-    "headerInfo": [],
-    "authInfo": {
-      "status": "0"
-    },
-    "requestInfo": [
-      {
-        "paramNotNull": "0",
-        "paramType": "3",
-        "paramName": "",
-        "paramKey": "id",
-        "paramValue": "",
-        "paramLimit": "",
-        "paramNote": "",
-        "paramValueList": [],
-        "default": 0,
-        "childList": []
-      },
-      {
-        "paramNotNull": "0",
-        "paramType": "0",
-        "paramName": "",
-        "paramKey": "name",
-        "paramValue": "",
-        "paramLimit": "",
-        "paramNote": "",
-        "paramValueList": [],
-        "default": 0,
-        "childList": []
-      },
-      {
-        "paramNotNull": "0",
-        "paramType": "0",
-        "paramName": "",
-        "paramKey": "path",
-        "paramValue": "",
-        "paramLimit": "",
-        "paramNote": "",
-        "paramValueList": [],
-        "default": 0,
-        "childList": []
-      },
-      {
-        "paramNotNull": "0",
-        "paramType": "8",
-        "paramName": "",
-        "paramKey": "public",
-        "paramValue": "",
-        "paramLimit": "",
-        "paramNote": "",
-        "paramValueList": [],
-        "default": 0,
-        "childList": []
-      }
-    ],
-    "urlParam": [],
-    "restfulParam": [],
-    "resultInfo": [],
-    "responseHeader": [],
-    "resultParamJsonType": 0,
-    "resultParamType": 0,
-    "structureID": "[]",
-    "databaseFieldID": "[]",
-    "globalStructureID": "[]",
-    "fileID": null,
-    "dataStructureList": [],
-    "globalDataStructureList": [],
-    "testCastList": [],
-    "mockExpectationList": [],
-    "apiManagerID": 38194,
-    "createUserID": 38194,
-    "updateUserID": 38194,
-    "apiType": "http"
+    "dataStructureList": []
   }
 ]
