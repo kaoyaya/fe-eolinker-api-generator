@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/kaoyaya/fe-eolinker-api-generator#readme",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "mkdirp": "^0.5.1",
     "path-to-regexp": "^2.2.1",
     "readline-sync": "^1.4.10"
