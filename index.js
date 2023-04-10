@@ -334,9 +334,9 @@ function geneApi(
     }
     fs.readFile(entry, (err, data) => {
         if (err) throw err;
-        const apiList = JSON.parse(data.toString());
+        let apiList = JSON.parse(data.toString());
         let strs = '';
-
+        apiList = apiList['apiList'] || apiList
         apiList.filter(apiFilter).forEach((item) => {//json内容
             const {baseInfo, headerInfo, requestInfo, restfulParam, urlParam} = item;
 
