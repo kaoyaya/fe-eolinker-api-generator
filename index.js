@@ -55,6 +55,7 @@ const API_TYPE = {
 const defaultConfig = {
     apiType: 'rest',
     overwrite: true,
+    baseURL: '',
     importHead: `import xhr from '../xhr/microXhr';`,
     outputExtname: `js`,
 };
@@ -153,6 +154,7 @@ function generatorPostTpl(apiType, comment, funcName, funcPa, url, headerStr, da
           method: 'post',${headerStr ? `\n      headers:${headerStr},` : ''}
           url: \`${url}\`,${isPostJson ? '' : '\n      json: false,'}
           data: ${dataPa},
+          baseURL: '${defaultConfig.baseURL}',
           custom: arguments[1]
       })
     },`;
@@ -163,6 +165,7 @@ function generatorPostTpl(apiType, comment, funcName, funcPa, url, headerStr, da
       method: 'post',${headerStr ? `\n      headers:${headerStr},` : ''}
       url: \`${url}\`,${isPostJson ? '' : '\n      json: false,'}
       data: ${dataPa},
+      baseURL: '${defaultConfig.baseURL}',
       custom: arguments[1]
     })
   }`;
@@ -177,6 +180,7 @@ function generatorGetTpl(apiType, comment, funcName, funcPa, url, headerStr, dat
     return $axios({
       url: \`${url}\`,${headerStr ? `\n      headers:${headerStr},` : ''}
       params: ${dataPa || '{}'},
+      baseURL: '${defaultConfig.baseURL}',
       custom: arguments[1]
     })
   },`;
@@ -187,6 +191,7 @@ function generatorGetTpl(apiType, comment, funcName, funcPa, url, headerStr, dat
     return xhr({
       url: \`${url}\`,${headerStr ? `\n      headers:${headerStr},` : ''}
       params: ${dataPa || '{}'},
+      baseURL: '${defaultConfig.baseURL}',
       custom: arguments[1]
     })
   }`;

@@ -24,4 +24,5 @@ gene({
   overwrite: true,
   // post 方法是否使用json,默认为 false,使用formData
   globalPostJson: true,
+  baseURL: '/api/v1/'
 });
